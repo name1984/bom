@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_picking_validate_all" model="ir.ui.view">
+        <field name="name">delivery.stock.picking.form.view</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='pack_operation_product_ids']" position="before">
+                    <button name="do_all" string="Do All Operations" class="oe_highlight" type="object"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+</odoo>
